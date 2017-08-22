@@ -1,0 +1,51 @@
+.x-form-trigger-default.trigger-search{
+    @extend .fa-search;
+}
+
+.x-form-trigger-default.trigger-clear{
+    @extend .fa-times;
+}
+
+.x-form-trigger-default.trigger-extenal{
+    @extend .fa-external-link;
+}
+
+
+.displaygrid-item{
+    @extend .bounlist-item;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+}
+.displaygrid-item-text{
+    @extend .x-form-text-wrap;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.displaygrid-item-remove{
+    @extend .x-form-text-wrap;
+    @extend .x-fa;
+    @extend .fa-trash;
+    font-size: 18px;
+    padding: 5px 10px;
+    vertical-align: middle;
+
+    &:hover:not(.disabled){
+        color: red;
+    }
+
+    &:not(.disabled){
+        cursor: pointer;
+    }
+
+    &.disabled{
+        opacity: 0.2;
+    }
+}
+
+.x-form-readonly{
+    .displaygrid-item-remove,
+    .x-form-trigger-wrap{
+        display: none !important;
+    }
+}
